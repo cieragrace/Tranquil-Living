@@ -1,0 +1,29 @@
+.list-section {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.list-container {
+  height: 100%;
+  width: 90%;
+  border: solid 2px #846358;
+  background-color: transparent;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  /* justify-content: center; */
+}
+
+.title {
+margin-top: 5%;
+}
+
+.line {
+  width: 20%;
+  height: 2px;
+  background-color: #61412A;
+}

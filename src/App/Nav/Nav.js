@@ -11,7 +11,7 @@ const toggleMenu = () => {
   return(
     <nav className='nav-container'>
       <button className="hamburger" onClick={toggleMenu}>
-        <div className={`bar ${isOpen ? 'open' : ''}`} />
+        <div className={`bar ${isOpen ? 'open' : ''}`}  />
         <div className={`bar ${isOpen ? 'open' : ''}`} />
         <div className={`bar ${isOpen ? 'open' : ''}`} />
       </button>

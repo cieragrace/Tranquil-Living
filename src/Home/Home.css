@@ -1,0 +1,33 @@
+.home-container {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-image {
+  height: 90%;
+  width: 90%;
+  background-image: url('../../public/assets/HomeImage.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* border: 3px solid #B19271; */
+  border-radius: 5px;
+}
+
+h3 {
+  color: #61412A;
+  font-size: medium;
+  height: 10%;
+  margin-bottom: 0%;
+  font-weight:normal
+}
+
+h4 {
+  color: #61412A;
+  font-size: 10px;
+  font-weight: normal;
+  height: 5%;
+  margin-top: 0;
+}

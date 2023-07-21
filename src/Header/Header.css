@@ -1,33 +1,15 @@
 .header-container {
-  height: 15%;
+  height: 10%;
   width: 100%;
-  border: 1px black solid;
   display: flex;
+  justify-content: center;
 }
 
 .app-name {
-  font-size: x-large;
-  color: #84695D;
-  height: 100%;
-  width: 75%;
+  font-size: xx-large;
+  color: #CEC1BC;
+  height: 90%;
+  width: 65%;
   margin-left: 7%;
-}
-
-.nav-container {
-  width: 25%;
-  height: 100%;
-}
-
-.hamburger {
-  width: 100%;
-  height: 100%;
-  color: #AE785E;
-}
-
-.menu {
-  background-color: #B19271;
-}
-
-.menu-items {
- color: #84695D;
+  font-weight: 500;
 }
