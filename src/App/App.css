@@ -1,5 +1,6 @@
 .app-container {
   width: 100vw;
   height: 100vh;
-  background-color: #D8C8BA;
+  background-image: url('../../public/assets/Background.png');
+  background-size: cover;
 }
