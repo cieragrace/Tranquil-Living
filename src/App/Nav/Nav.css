@@ -1,5 +1,5 @@
 .nav-container {
-  width: 25%;
+  width: 35%;
   height: 70%;
 }
 
@@ -12,10 +12,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 7%;
 }
 
 .bar {
-  width: 65%;
+  width: 50%;
   height: 3px;
   background-color: #D8C8BA;
   margin: 6px 0;
@@ -23,7 +24,7 @@
 }
 
 .bar:nth-child(2) {
-  width: 85%; 
+  width: 70%; 
 }
 
 .menu {
