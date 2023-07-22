@@ -90,7 +90,10 @@ const App = () => {
         <Route
         exact path='/monthly-tasks'
         render={() => (
-            <MonthlyList />
+          <>
+            <Header />
+            <MonthlyList monthlyTasks={monthlyTasks}/>
+          </>
           )}
         />
         <Route
