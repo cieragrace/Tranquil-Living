@@ -5,11 +5,11 @@
   flex-direction: column;
   align-items: center;
   overflow: auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
   }
   
   .annual-image {
-    height: 45%;
+    height: 43%;
     width: 90%;
     background-image: url('/public/assets/AnnualImage.png');
     background-size: 100% 100%;
@@ -20,15 +20,16 @@
   .annual-header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
+    margin-bottom: 0%;
   }
   
   .annual-title {
     color: #61412A;
     font-size: medium;
     height: 10%;
-    margin-bottom: 0%;
+    margin-top: 0%;
     font-weight:normal
   }
   
@@ -41,7 +42,7 @@
   }
   
   .task-container {
-    height: 45%;
+    height: 40%;
     width: 90%;
     border: solid 2px #846358;
     background-color: transparent;
