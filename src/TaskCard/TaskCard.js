@@ -13,8 +13,8 @@ const TaskCard = (props) => {
         />
         {props.name}
       </label>
-      <button className='remove-button'>Remove from My List</button>
       <div className='line'></div>
+      <button className='remove-button'>Remove from My List</button>
     </div>
   );
 };

@@ -14,6 +14,7 @@ const DailyList = ({dailyTasks}) => {
 
   return (
     <div className='daily-list-container'>
+      <div className='daily-image'></div>
       <div className='daily-header'>
         <h2 className='daily-title'>My Daily Tasks</h2>
         <h3 className='daily-date'>Today's Date</h3>
