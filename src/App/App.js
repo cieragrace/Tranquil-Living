@@ -108,7 +108,10 @@ const App = () => {
         <Route
           exact path='/annual-tasks'
           render={() => (
-            <AnnualList />
+            <>
+              <Header />
+              <AnnualList annualTasks={annualTasks}/>
+            </>
           )}
         />
         </Switch>
