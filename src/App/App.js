@@ -19,6 +19,8 @@ const App = () => {
   const [monthlyTasks, setMonthlyTasks] = useState([]);
   const [seasonalTasks, setSeasonalTasks] = useState([]);
   const [annualTasks, setAnnualTasks] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState([]);
+  const [incompleteTasks, setIncompleteTasks] =useState([])
 
   useEffect(() => {
     const getCleaningLists = () => {
@@ -73,7 +75,9 @@ const App = () => {
             <>
               <Header />
               <DailyList 
-                dailyTasks={dailyTasks}   />
+                dailyTasks={dailyTasks}
+                incompletedTasks={incompleteTasks}
+                setIncompletedTasks={setIncompleteTasks}   />
             </>
           )}
         />

@@ -2,6 +2,10 @@ import React from 'react';
 import './TaskCard.css';
 
 const TaskCard = (props) => {
+  const handleCheckboxChange = () => {
+    props.onTaskCompletion(props.id);
+  };
+
   return (
     <div className='task-card-container'>
       <label className='task-label' htmlFor={`task-${props.id}`}>
@@ -10,6 +14,7 @@ const TaskCard = (props) => {
           className='task-checkbox'
           type='radio'
           name='tasks'
+          onChange={handleCheckboxChange}
         />
         {props.name}
       </label>

@@ -1,16 +1,31 @@
+import React, { useState } from 'react';
 import TaskCard from '../../TaskCard/TaskCard';
 import './DailyList.css';
 
-const DailyList = ({dailyTasks}) => {
+const DailyList = ({ dailyTasks }) => {
+  const [completedDaily, setCompletedDaily] = useState([]);
 
-  const dailyChores = dailyTasks.map(task => {
-    return(
-      <TaskCard 
+  const handleTaskCompletion = (taskId) => {
+    const completedTask = dailyTasks.find((task) => task.id === taskId);
+
+    if (completedTask) {
+      const updatedDailyTasks = dailyTasks.filter((task) => task.id !== taskId);
+      setCompletedDaily((prevCompleted) => [...prevCompleted, completedTask]);
+    }
+  };
+
+  const activeDailyTasks = dailyTasks.filter((task) => !completedDaily.includes(task));
+
+  const dailyChores = activeDailyTasks.map((task) => {
+    return (
+      <TaskCard
         id={task.id}
         name={task.name}
-        key={task.key}/>
-    ) 
-  })
+        key={task.key}
+        onTaskCompletion={handleTaskCompletion} 
+      />
+    );
+  });
 
   return (
     <div className='daily-list-container'>
@@ -22,6 +37,8 @@ const DailyList = ({dailyTasks}) => {
       <div className='task-container'>{dailyChores}</div>
     </div>
   );
-}
+};
 
 export default DailyList;
+
+
