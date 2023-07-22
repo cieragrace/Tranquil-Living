@@ -13,18 +13,46 @@ import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 
 const App = () => {
-const [cleaningLists, setCleaningLists] = useState([])
-const [incompletedTasks, setIncompleteTasks] = useState([])
-const [completedTasks, setCompletedTasks] = useState([])
+  const [cleaningLists, setCleaningLists] = useState([]);
+  const [dailyTasks, setDailyTasks] = useState([]);
+  const [weeklyTasks, setWeeklyTasks] = useState([]);
+  const [monthlyTasks, setMonthlyTasks] = useState([]);
+  const [seasonalTasks, setSeasonalTasks] = useState([]);
+  const [annualTasks, setAnnualTasks] = useState([]);
 
-useEffect(() => {
-  const getCleaningLists = () => {
-    getAPIData()
-    .then((data) => setCleaningLists(data.tasks))
-    .catch((error) => console.log("error"))
-  }
-  getCleaningLists()
-}, []) 
+  useEffect(() => {
+    const getCleaningLists = () => {
+      getAPIData()
+        .then((data) => {
+          setCleaningLists(data.tasks);
+          separateTasksByCategory(data.tasks);
+        })
+        .catch((error) => console.log("error"));
+    };
+    getCleaningLists();
+  }, []);
+
+  const separateTasksByCategory = (tasks) => {
+    const daily = [];
+    const weekly = [];
+    const monthly = [];
+    const seasonal = [];
+    const annual = [];
+
+    tasks.forEach((category) => {
+      if (category.daily) daily.push(...category.daily);
+      if (category.weekly) weekly.push(...category.weekly);
+      if (category.monthly) monthly.push(...category.monthly);
+      if (category.seasonal) seasonal.push(...category.seasonal);
+      if (category.annual) annual.push(...category.annual);
+    });
+
+    setDailyTasks(daily);
+    setWeeklyTasks(weekly);
+    setMonthlyTasks(monthly);
+    setSeasonalTasks(seasonal);
+    setAnnualTasks(annual);
+  };
 
   return(
     <div className='app-container'>
@@ -42,13 +70,18 @@ useEffect(() => {
         <Route
           exact path='/daily-tasks'
           render={() => (
-            <DailyList />
+            <>
+              <Header />
+              <DailyList 
+                dailyTasks={dailyTasks}   />
+            </>
           )}
         />
         <Route
           exact path='/weekly-tasks'
           render={() => (
-            <WeeklyList />
+            <WeeklyList 
+              weeklyTasks={weeklyTasks}/>
           )}
         />
         <Route
