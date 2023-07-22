@@ -1,0 +1,56 @@
+.daily-list-container {
+height: 90%;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: auto;
+justify-content: space-evenly;
+}
+
+.daily-image {
+  height: 43%;
+  width: 90%;
+  background-image: url('/public/assets/DailyImage.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.daily-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 0%;
+}
+
+.daily-title {
+  color: #61412A;
+  font-size: medium;
+  height: 10%;
+  margin-top: 0%;
+  font-weight:normal
+}
+
+.daily-date {
+  color: #61412A;
+  font-size: 10px;
+  font-weight: normal;
+  margin-top: 0;
+  height: 10%;
+}
+
+.task-container {
+  height: 40%;
+  width: 90%;
+  border: solid 2px #846358;
+  background-color: transparent;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: auto;
+  padding: 1%;
+}

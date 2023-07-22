@@ -1,0 +1,38 @@
+.task-card-container {
+  border: 2px solid #CEC1BC;
+  padding: 2%;
+  width: 90%;
+  height: 20%;
+  text-align: center;
+  text-decoration: none;
+  color: #61412A;
+  background-color: #EBE9E6;
+  opacity: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1%;
+}
+
+
+.task-label {
+  font-size: small;
+  font-weight: normal;
+  padding: 1%;
+}
+.remove-button {
+  width: 50%;
+  height: 10%;
+  border: none;
+  background-color: transparent;
+  color: #CCA297;
+  font-size: x-small;
+  padding: 1%;
+}
+
+.line {
+  width: 20%;
+  height: 2px;
+  background-color: #61412A;
+}

@@ -6,11 +6,11 @@ const CleaningList = () => {
       <section className='list-container'>
         <h4 className='title'>My Clean Home Checklists</h4>
         <div className='line'></div>
-        <Link className='daily link'>Daily</Link>
-        <Link className='weekly link'>Weekly</Link>
-        <Link className='monthly link'>Monthly</Link>
-        <Link className='seasonal link'>Seasonal</Link>
-        <Link className='annual link'>Annual</Link>
+        <Link className='daily link' to={'/daily-tasks'}>Daily</Link>
+        <Link className='weekly link' to={'/weekly-tasks'}>Weekly</Link>
+        <Link className='monthly link' to='/monthly-tasks'>Monthly</Link>
+        <Link className='seasonal link' to={'/seasonal-tasks'}>Seasonal</Link>
+        <Link className='annual link' to={'/annual-tasks'}>Annual</Link>
       </section>
     </div>
   )

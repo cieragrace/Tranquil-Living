@@ -1,4 +1,4 @@
-.weekly-list-container {
+.seasonal-list-container {
   height: 90%;
   width: 100%;
   display: flex;
@@ -8,16 +8,16 @@
   justify-content: space-evenly;
   }
   
-  .weekly-image {
+  .seasonal-image {
     height: 43%;
     width: 90%;
-    background-image: url('/public/assets/WeeklyImage.png');
+    background-image: url('/public/assets/SeasonalImage.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 5px;
   }
   
-  .weekly-header {
+  .seasonal-header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -25,7 +25,7 @@
     margin-bottom: 0%;
   }
   
-  .weekly-title {
+  .seasonal-title {
     color: #61412A;
     font-size: medium;
     height: 10%;
@@ -33,7 +33,7 @@
     font-weight:normal
   }
   
-  .weekly-date {
+  .seasonal-date {
     color: #61412A;
     font-size: 10px;
     font-weight: normal;
