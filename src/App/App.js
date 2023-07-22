@@ -80,8 +80,11 @@ const App = () => {
         <Route
           exact path='/weekly-tasks'
           render={() => (
-            <WeeklyList 
-              weeklyTasks={weeklyTasks}/>
+            <>
+              <Header />
+              <WeeklyList 
+                weeklyTasks={weeklyTasks}/>
+            </>
           )}
         />
         <Route
