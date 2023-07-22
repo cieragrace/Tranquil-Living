@@ -99,7 +99,10 @@ const App = () => {
         <Route
           exact path='/seasonal-tasks'
           render={() => (
-            <SeasonalList />
+            <>
+              <Header />
+              <SeasonalList seasonalTasks={seasonalTasks}/>
+            </>
           )}
         />
         <Route
